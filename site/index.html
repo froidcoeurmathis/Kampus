@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kampus</title>
+<meta name="description" content="Kampus : partage tes cours, synthèses, exercices et examens avec les étudiants de l'ULiège.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23fff'/%3E%3Cpath d='M9 44C9 30 20 23 32 23s23 7 23 21c0 8-10 14-23 14S9 52 9 44Z' fill='%234F8F9B'/%3E%3Cpath d='M32 7 57 16 32 25 7 16Z' fill='%2300373E'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app"><div class="loading">Chargement de Kampus…</div></div>
+<div id="modal"></div>
+<div id="dm"></div>
+<div class="toast" id="toast"></div>
+
+<!-- Outils : Supabase (comptes, base de données, fichiers) et PDF.js (afficher les PDF) -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.57.4/dist/umd/supabase.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<!-- Réglages + facultés, programmes et cours de l'ULiège -->
+<script src="config.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
