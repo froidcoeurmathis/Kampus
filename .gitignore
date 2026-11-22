@@ -2,3 +2,12 @@
 __pycache__/
 *.pyc
 .claude/settings.local.json
+
+# Mémoire du projet (reste sur le Mac, le dépôt est public)
+cerveau/
+CLAUDE.md
+# Page de test locale (fausses données), jamais en ligne
+site/_test.html
+site/_demo.pdf
+# Skill de design installé sur le Mac (pas besoin de le publier)
+.claude/skills/

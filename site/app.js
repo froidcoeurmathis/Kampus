@@ -63,16 +63,35 @@ const catOf = (id) => CATS.find((c) => c.id === id) || CATS[0];
 /* La mascotte : un petit requin sérieux avec son chapeau de diplômé */
 const MASCOT = `<svg class="mascot" viewBox="0 0 64 64" aria-hidden="true">
   <rect width="64" height="64" rx="15" fill="#FFFFFF"/>
-  <path d="M9 44 C9 30 20 23 32 23 C44 23 55 30 55 44 C55 52 45 58 32 58 C19 58 9 52 9 44 Z" fill="#4F8F9B"/>
-  <path d="M18 48 C21 43 26.5 41 32 41 C37.5 41 43 43 46 48 C43 53 37.5 55 32 55 C26.5 55 21 53 18 48 Z" fill="#EEF2F1"/>
-  <path d="M20.5 31.6 L28 32.8 M43.5 31.6 L36 32.8" stroke="#00373E" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M13 43L3 52.5L17 50Z" fill="#3B7C88"/><path d="M51 43L61 52.5L47 50Z" fill="#3B7C88"/>
+  <path d="M9 44C9 30 20 23 32 23C44 23 55 30 55 44C55 52 45 58 32 58C19 58 9 52 9 44Z" fill="#4F8F9B"/>
+  <path d="M18 48C21 43 26.5 41 32 41C37.5 41 43 43 46 48C43 53 37.5 55 32 55C26.5 55 21 53 18 48Z" fill="#EEF2F1"/>
+  <path d="M20.5 31.6L28 32.8M43.5 31.6L36 32.8" stroke="#00373E" stroke-width="1.8" stroke-linecap="round"/>
   <ellipse cx="24.5" cy="36.4" rx="2.3" ry="2.5" fill="#00373E"/><ellipse cx="39.5" cy="36.4" rx="2.3" ry="2.5" fill="#00373E"/>
-  <path d="M28 45.2 Q32 46.4 36 45.2" stroke="#00373E" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-  <path d="M18 19 L18 25.5 C24 30 40 30 46 25.5 L46 19 L32 24 Z" fill="#002A30"/>
-  <path d="M32 7 L57 16 L32 25 L7 16 Z" fill="#00373E"/>
-  <path d="M32 16 L50 19.5 L50 29" stroke="#F2C230" stroke-width="2" fill="none" stroke-linecap="round"/>
-  <path d="M48 28.5 h4 l1 5 h-6 z" fill="#F2C230"/>
-  <circle cx="32" cy="16" r="1.8" fill="#F2C230"/>
+  <path d="M28 45.2Q32 46.4 36 45.2" stroke="#00373E" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <path d="M31 27C33 18 37.5 8.5 45.5 1.5C43.2 8.5 42.4 17 44 27Z" fill="#4F8F9B"/>
+  <path d="M18 19L18 25.5C24 30 40 30 46 25.5L46 19L32 24Z" fill="#002A30"/>
+  <path d="M32 7L57 16L32 25L7 16Z" fill="#00373E"/>
+  <path d="M37.4 9.1L38.3 11.3L39.5 9.9L40.5 12.1L41.7 10.5L42.9 12.4L43.3 10.9Z" fill="#4F8F9B"/>
+  <path d="M37.6 9.2L35.6 5.6L39.1 8.1Z" fill="#00373E"/><path d="M43.2 10.9L46.6 8.1L45.5 11.8Z" fill="#00373E"/>
+  <path d="M47 17.6L52 20V28.5" stroke="#F2C230" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M50 28h4l1 5h-6z" fill="#F2C230"/>
+</svg>`;
+// Version sans fond blanc, pour la barre du haut (fond turquoise foncé) : requin un peu éclairci, toque bordée de clair
+const MASCOT_DARK = `<svg class="mascot bare" viewBox="0 0 64 64" aria-hidden="true">
+  <path d="M13 43L3 52.5L17 50Z" fill="#4E929D"/><path d="M51 43L61 52.5L47 50Z" fill="#4E929D"/>
+  <path d="M9 44C9 30 20 23 32 23C44 23 55 30 55 44C55 52 45 58 32 58C19 58 9 52 9 44Z" fill="#66A3AE"/>
+  <path d="M18 48C21 43 26.5 41 32 41C37.5 41 43 43 46 48C43 53 37.5 55 32 55C26.5 55 21 53 18 48Z" fill="#F2F6F5"/>
+  <path d="M20.5 31.6L28 32.8M43.5 31.6L36 32.8" stroke="#00373E" stroke-width="1.8" stroke-linecap="round"/>
+  <ellipse cx="24.5" cy="36.4" rx="2.3" ry="2.5" fill="#00373E"/><ellipse cx="39.5" cy="36.4" rx="2.3" ry="2.5" fill="#00373E"/>
+  <path d="M28 45.2Q32 46.4 36 45.2" stroke="#00373E" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <path d="M31 27C33 18 37.5 8.5 45.5 1.5C43.2 8.5 42.4 17 44 27Z" fill="#66A3AE"/>
+  <path d="M18 19L18 25.5C24 30 40 30 46 25.5L46 19L32 24Z" fill="#050F11"/>
+  <path d="M32 7L57 16L32 25L7 16Z" fill="#0A1A1D"/>
+  <path d="M37.4 9.1L38.3 11.3L39.5 9.9L40.5 12.1L41.7 10.5L42.9 12.4L43.3 10.9Z" fill="#66A3AE"/>
+  <path d="M37.6 9.2L35.6 5.6L39.1 8.1Z" fill="#0A1A1D"/><path d="M43.2 10.9L46.6 8.1L45.5 11.8Z" fill="#0A1A1D"/>
+  <path d="M47 17.6L52 20V28.5" stroke="#F2C230" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M50 28h4l1 5h-6z" fill="#F2C230"/>
 </svg>`;
 
 /* ---------- petites aides ---------- */
@@ -87,7 +106,8 @@ function fmtDay(v) { const d = new Date(tsOf(v)); return `${d.getDate()} ${MOIS[
 function fmtTime(v) { const d = new Date(tsOf(v)); return `${d.getDate()} ${MOIS[d.getMonth()]} · ${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`; }
 function sizeStr(b) { return b > 1e6 ? (b / 1e6).toFixed(1).replace(".", ",") + " Mo" : Math.max(1, Math.round(b / 1e3)) + " Ko"; }
 const yearOf = (v) => String(new Date(tsOf(v)).getFullYear());   // l'année se met toute seule, selon la date d'ajout
-const COLORS = ["#00707F", "#5B2C86", "#00843B", "#005CA9", "#940104", "#C25A16", "#5B57A2", "#8C6D00"];
+// Pastilles des personnes : fonds doux de la même famille, texte foncé assorti
+const COLORS = [["#D6ECEE", "#00535E"], ["#E3E7F3", "#2F3F7A"], ["#E4EEDA", "#3A5A1E"], ["#F3E7D6", "#74450F"], ["#EEE2EC", "#6B2F63"], ["#DDE7EA", "#28505C"]];
 function color(s) { let h = 0; for (const c of String(s)) h = (h * 31 + c.charCodeAt(0)) >>> 0; return COLORS[h % COLORS.length]; }
 function initials(name) { return String(name).trim().split(/\s+/).map((w) => w[0]).join("").slice(0, 2).toUpperCase(); }
 function ext(name) { const m = /\.([a-z0-9]+)$/i.exec(name); return m ? m[1].toUpperCase() : "Fichier"; }
@@ -103,7 +123,7 @@ async function ensureNames(ids) {
   (data || []).forEach((p) => (NAMES[p.id] = p.full_name));
   miss.forEach((id) => { if (!(id in NAMES)) NAMES[id] = "Étudiant·e"; });
 }
-function avatar(id, sm) { const n = nameOf(id); return `<span class="av ${sm ? "sm" : ""}" data-person="${esc(id)}" title="Écrire à ${esc(n)} en privé" style="background:${color(id)}">${esc(initials(n))}</span>`; }
+function avatar(id, sm) { const n = nameOf(id); return `<span class="av ${sm ? "sm" : ""}" data-person="${esc(id)}" title="Écrire à ${esc(n)} en privé" style="background:${color(id)[0]};color:${color(id)[1]}">${esc(initials(n))}</span>`; }
 const person = (id) => `<b class="person" data-person="${esc(id)}" title="Écrire à ${esc(nameOf(id))} en privé">${esc(nameOf(id))}</b>`;
 
 /* ---------- Index : quels programmes partagent quel cours ---------- */
@@ -313,8 +333,8 @@ function searchBox(id, ph) {
 function dmDot() { const n = unreadTotal(); return n ? `<span class="dot">${n}</span>` : ""; }
 function header() {
   return `<header class="top">
-    <div class="logo" data-go="1" title="Accueil">${MASCOT}Kampus</div>
-    ${S.path.length > 1 ? searchBox("gs", "Rechercher un master, une faculté, un cours… (ex : sales)") : ""}
+    <div class="logo" data-go="1" title="Accueil">${MASCOT_DARK}Kampus</div>
+    ${S.path.length > 1 ? searchBox("gs", "Rechercher un master, une faculté, un cours…") : ""}
     <div class="top-right">
       <button class="btn-top" id="openDm" title="Messages privés">${icon("mail", 17)}<span class="long">Messages</span>${dmDot()}</button>
       <span class="who-label">${avatar(S.me.id, true).replace("data-person", "data-x")} ${esc(S.me.name)}</span>
@@ -334,12 +354,12 @@ function navLine() {
 }
 
 function viewHome() {
-  return `<div class="hero">${MASCOT}<div style="flex:1;width:100%">
-      <h1>Salut ${esc(S.me.name.split(" ")[0])} !</h1>
-      <p class="sub">Tape le nom de ton master ou de ton cours pour y aller directement…</p>
-      ${searchBox("hs", "ex : sales management, finance, ingénieur civil, néerlandais…")}
-    </div></div>
-    <div class="group-title">…ou choisis ta faculté à l'ULiège</div>
+  return `<section class="home-head">
+      <h1>Salut ${esc(S.me.name.split(" ")[0])}</h1>
+      <p class="sub">Trouve ton cours, ton master ou ta faculté.</p>
+      ${searchBox("hs", "Rechercher un cours, un master, une faculté…")}
+    </section>
+    <h2 class="group-title">Facultés de l'ULiège</h2>
     <div class="grid">${SCHOOL.faculties.map((f) => `<button class="tile" data-open="${f.id}">
       <div class="badge-ic">${icon(f.id, 24)}</div><div class="name">${esc(f.name)}</div>
       <div class="meta">${f.programmes.length} programme${f.programmes.length > 1 ? "s" : ""}</div></button>`).join("")}</div>`;
@@ -350,7 +370,7 @@ function viewProgrammes() {
   const groups = [["Bachelier", "Bacheliers"], ["Master", "Masters"]].map(([k, title]) => {
     const list = fac.programmes.filter((p) => p.kind === k);
     if (!list.length) return "";
-    return `<div data-group><div class="group-title">${title}</div><div class="list">${list.map((p) => {
+    return `<div data-group><h2 class="group-title">${title}</h2><div class="list">${list.map((p) => {
       const nC = p.courses ? Object.values(p.courses).reduce((a, l) => a + l.length, 0) : 0;
       return `<button class="row" data-open="${p.id}" data-search="${esc(norm(p.name))}">
         <div class="grow"><div class="rname">${esc(p.name)}</div><div class="rmeta">${p.years.length} année${p.years.length > 1 ? "s" : ""} · ${esc(p.years.join(", "))}</div></div>
@@ -358,8 +378,8 @@ function viewProgrammes() {
     }).join("")}</div></div>`;
   }).join("");
   return `${navLine()}
-    <div class="page-title"><div class="eyebrow">ULiège</div><h1>${esc(fac.name)}</h1><p class="sub">${fac.programmes.length} programmes</p></div>
-    <div class="toolbar"><div class="search-wrap">${icon("search", 17)}<input class="search" id="search" placeholder="Filtrer : tape quelques lettres de ton programme (ex : sales)"></div></div>
+    <div class="page-title"><h1>${esc(fac.name)}</h1><p class="sub">${fac.programmes.length} programmes</p></div>
+    <div class="toolbar"><div class="search-wrap">${icon("search", 17)}<input class="search" id="search" placeholder="Filtrer les programmes"></div></div>
     ${groups}
     <p class="empty" id="noResult" hidden>Aucun programme ne correspond. Essaie la grande barre de recherche en haut.</p>`;
 }
@@ -367,7 +387,7 @@ function viewProgrammes() {
 function viewYears() {
   const { prog } = cur();
   return `${navLine()}
-    <div class="page-title"><div class="eyebrow">${esc(prog.kind)}</div><h1>${esc(prog.name)}</h1><p class="sub">Choisis ton année</p></div>
+    <div class="page-title"><h1>${esc(prog.name)}</h1><p class="sub">${esc(prog.kind)} · choisis ton année</p></div>
     <div class="grid">${prog.years.map((y) => {
       const n = ((prog.courses || {})[y] || []).length;
       return `<button class="tile" data-open="${esc(y)}"><div class="badge-ic">${icon("calendar", 24)}</div><div class="name">${esc(y)}</div>
@@ -388,10 +408,10 @@ function viewCourses() {
   const list = (prog.courses || {})[year] || [];
   const must = list.filter((c) => !c.choice), opt = list.filter((c) => c.choice);
   return `${navLine()}
-    <div class="page-title"><div class="eyebrow">${esc(prog.name)}</div><h1>${esc(year)}</h1><p class="sub">${list.length} cours</p></div>
-    ${list.length > 6 ? `<div class="toolbar"><div class="search-wrap">${icon("search", 17)}<input class="search" id="search" placeholder="Filtrer : nom du cours ou du prof…"></div></div>` : ""}
-    ${must.length ? `<div data-group><div class="group-title">Cours obligatoires</div><div class="list">${must.map(courseRow).join("")}</div></div>` : ""}
-    ${opt.length ? `<div data-group><div class="group-title">Cours au choix</div><div class="list">${opt.map(courseRow).join("")}</div></div>` : ""}
+    <div class="page-title"><h1>${esc(year)}</h1><p class="sub">${esc(prog.name)} · ${list.length} cours</p></div>
+    ${list.length > 6 ? `<div class="toolbar"><div class="search-wrap">${icon("search", 17)}<input class="search" id="search" placeholder="Filtrer : nom du cours ou du prof"></div></div>` : ""}
+    ${must.length ? `<div data-group><h2 class="group-title">Cours obligatoires</h2><div class="list">${must.map(courseRow).join("")}</div></div>` : ""}
+    ${opt.length ? `<div data-group><h2 class="group-title">Cours au choix</h2><div class="list">${opt.map(courseRow).join("")}</div></div>` : ""}
     ${!list.length ? `<div class="list"><div class="empty">Pas de cours pour cette année.</div></div>` : ""}
     <p class="empty" id="noResult" hidden>Aucun cours ne correspond à ta recherche.</p>`;
 }
@@ -486,7 +506,7 @@ async function sendMessage(text) {
   const row = { course_code: c.code, body: text };
   if (ref) Object.assign(row, { ref_file_id: ref.fileId, ref_page: ref.page, ref_y: ref.y, ref_label: ref.label });
   S.draft = ""; S.draftRef = null;
-  $$(".band.sel").forEach((b) => b.remove());
+  clearMarks("sel");
   const { data, error } = await sb.from("messages").insert(row).select().single();
   if (error) { S.draft = text; S.draftRef = ref; toast("Message pas envoyé. Vérifie ta connexion et réessaie.", true); }
   else if (S.c === c && !c.msgs.some((x) => x.id === data.id)) c.msgs.push(data);
@@ -557,7 +577,7 @@ function filesPanel() {
   const yearCount = (y) => files.filter((f) => yearOf(f.created_at) === y && (!S.fq || norm(nameOf(f.uploader_id) + " " + f.name).includes(norm(S.fq)))).length;
   const note = S.fq || S.fyear ? `<div class="filter-note">Filtre actif : ${S.fq ? `« ${esc(S.fq)} »` : ""}${S.fq && S.fyear ? " · " : ""}${S.fyear ? esc(S.fyear) : ""} — <button id="clearFilters">tout afficher</button></div>` : "";
   return `<div class="ftools">
-      <div class="search-wrap">${icon("search", 17)}<input class="search" id="fsearch" placeholder="Chercher une personne ou un fichier (ex : Noémie)" value="${esc(S.fq)}"></div>
+      <div class="search-wrap">${icon("search", 17)}<input class="search" id="fsearch" placeholder="Chercher une personne ou un fichier" value="${esc(S.fq)}"></div>
       <select class="sel" id="fyear" title="Année"><option value="">Toutes les années</option>${years.map((y) => `<option value="${y}" ${S.fyear === y ? "selected" : ""}>${y} (${yearCount(y)})</option>`).join("")}</select>
       <select class="sel" id="sort" title="Trier">
         <option value="recent" ${S.sort === "recent" ? "selected" : ""}>Plus récents d'abord</option>
@@ -586,7 +606,7 @@ function viewCourse() {
     <button class="tab chat-tab ${S.tab === "chat" ? "on" : ""}" data-tab="chat">${icon("chat", 18)} Chat général<span class="count">${msgs.length}</span></button>
     ${CATS.map((k) => `<button class="tab ${k.id === S.tab ? "on" : ""}" data-tab="${k.id}">${icon(k.id, 18)} ${k.label}<span class="count">${filtered.filter((f) => f.category === k.id).length}</span></button>`).join("")}</div>`;
   return `${navLine()}
-    <div class="page-title"><div class="eyebrow">${esc(prog.name)} · ${esc(year)}</div><h1>${esc(course.name)}</h1><p class="sub">${esc(meta)}</p>${sharedHTML}</div>
+    <div class="page-title"><h1>${esc(course.name)}</h1><p class="sub">${esc(meta)}</p>${sharedHTML}</div>
     <div class="panel" style="margin-bottom:14px">${tabs}${S.tab === "chat" ? "" : filesPanel()}</div>
     ${S.tab === "chat" ? chatHTML("m") : ""}`;
 }
@@ -760,21 +780,31 @@ function pickSpot(e) {
   showSelBand(); renderViewerChat();
   $("#v-input")?.focus();
 }
-function makeBand(page, y, cls) {
+// Repère sur une page : une zone turquoise douce autour de l'endroit + une pastille sur le bord.
+// « sel » = l'endroit qu'on est en train de choisir (jaune) ; « hl » = l'endroit d'une question (turquoise).
+function makeMark(page, y, cls) {
   const sheet = $(`#pages .sheet[data-page="${page}"]`); if (!sheet) return null;
-  const b = document.createElement("div"); b.className = "band " + cls; b.style.top = y + "%";
-  sheet.appendChild(b); return b;
+  const m = document.createElement("div"); m.className = "mark " + cls;
+  m.style.top = Math.max(0, y - 2.2) + "%";
+  m.innerHTML = `<span class="mark-zone"></span><span class="mark-pin">${icon(cls === "sel" ? "marker" : "chat", 14)}</span>`;
+  sheet.appendChild(m); return m;
 }
+function clearMarks(cls) { $$("#pages .mark." + cls).forEach((b) => b.parentNode.removeChild(b)); }
 function showSelBand() {
-  $$("#pages .band.sel").forEach((b) => b.remove());
-  if (S.draftRef && S.viewer && S.draftRef.fileId === S.viewer.fileId) makeBand(S.draftRef.page, S.draftRef.y, "sel");
+  clearMarks("sel");
+  if (S.draftRef && S.viewer && S.draftRef.fileId === S.viewer.fileId) makeMark(S.draftRef.page, S.draftRef.y, "sel");
 }
-// Le surligneur : passe une fois sur l'endroit, reste ~3 s, puis s'efface
+// Amène l'endroit au milieu de l'écran, puis le montre : zone + pastille ~4 s, puis tout s'efface.
 function flash(ref) {
-  const b = makeBand(ref.page, ref.y ?? 10, "hl");
-  if (!b) { S.viewer.pending = ref; return; }
-  b.scrollIntoView({ block: "center", behavior: "smooth" });
-  setTimeout(() => b.remove(), 4800);
+  const sheet = $(`#pages .sheet[data-page="${ref.page}"]`);
+  if (!sheet) { S.viewer.pending = ref; return; }
+  clearMarks("hl");
+  const pages = $("#pages"), y = ref.y ?? 10;
+  pages.scrollTo({ top: Math.max(0, sheet.offsetTop + (sheet.offsetHeight * y) / 100 - pages.clientHeight * 0.4), behavior: "smooth" });
+  setTimeout(() => {
+    const m = S.viewer && makeMark(ref.page, y, "hl");
+    if (m) setTimeout(() => m.parentNode && m.parentNode.removeChild(m), 4700);   // zone et pastille s'effacent ensemble
+  }, 380);
 }
 function closeViewer(silent) {
   S.viewer = null; $("#modal").innerHTML = ""; document.body.style.overflow = "";
@@ -832,7 +862,7 @@ function renderDM() {
         const u = unreadFrom(id);
         return `<button class="dm-row ${u ? "unread" : ""}" data-dmopen="${esc(id)}">${avatar(id).replace("data-person", "data-x")}<div style="min-width:0;flex:1"><b class="nm">${esc(nameOf(id))}</b><div class="last">${esc(l.at(-1).body)}</div></div>${u ? `<span class="new">${u} nouveau${u > 1 ? "x" : ""}</span>` : ""}</button>`;
       }).join("") : `<div class="empty">Aucune conversation.<br>Clique sur le nom d'une personne (dans le chat ou sur un fichier) pour lui écrire en privé.</div>`}</div>
-      <div style="padding:12px 16px;font-size:13px;color:#8C8B82;border-top:1px solid var(--line)">Astuce : clique sur n'importe quel nom souligné pour lui écrire. Les messages pas encore lus sont en bleu.</div></div>`;
+      </div>`;
   } else {
     const other = S.dm;
     const list = S.dms.filter((m) => otherOf(m) === other);
@@ -842,7 +872,7 @@ function renderDM() {
         const mine = m.sender_id === me;
         return `<div class="msg ${mine ? "me" : ""}" style="max-width:88%"><div class="body"><div class="who">${mine ? "Toi" : esc(nameOf(m.sender_id))} · ${fmtTime(m.created_at)}</div><div class="bubble">${esc(m.body)}</div></div></div>`;
       }).join("") : `<div class="empty">Écris ton premier message privé à ${esc(nameOf(other).split(" ")[0])}.<br>Personne d'autre ne pourra le lire.</div>`}</div>
-      <form class="composer" id="dm-form"><div class="line"><textarea id="dm-input" placeholder="Message privé à ${esc(nameOf(other))}…">${esc(S.dmDraft)}</textarea><button class="btn">Envoyer</button></div></form></div>`;
+      <form class="composer" id="dm-form"><div class="line"><textarea id="dm-input" placeholder="Votre message…">${esc(S.dmDraft)}</textarea><button class="btn">Envoyer</button></div></form></div>`;
     const inp = $("#dm-input"), form = $("#dm-form");
     inp.oninput = () => (S.dmDraft = inp.value);
     inp.onkeydown = (e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); form.requestSubmit(); } };
@@ -972,6 +1002,7 @@ document.addEventListener("keydown", (e) => {
   if (S.dm) { S.dm = null; renderDM(); return; }
   if (S.viewer) closeViewer();
 });
+
 
 /* ================================================================
    DÉMARRAGE
